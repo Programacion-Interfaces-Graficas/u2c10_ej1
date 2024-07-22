@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MultiProperties xmlns="hu.skzs.multiproperties">
+    <Version>1.2</Version>
+    <Name>en_EN</Name>
+    <Description>Tabla de multipropiedades para el idioma en Ingles</Description>
+    <Handler>Java Properties Handler</Handler>
+    <Columns>
+        <Key>
+            <Width>200</Width>
+        </Key>
+        <Column>
+            <Name>Values</Name>
+            <Description>en_En	</Description>
+            <Width>150</Width>
+            <HandlerConfiguration>/u2c10_ej1/src/idiomas/en_EN.propierties|false|false|false|false|ISO-8859-1</HandlerConfiguration>
+        </Column>
+    </Columns>
+    <Records>
+        <Property>
+            <Name>lbl_idioma</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">CHOOSE LANGUAJE</Value>
+        </Property>
+        <Property>
+            <Name>lbl_nombre</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">NAMES</Value>
+        </Property>
+        <Property>
+            <Name>lbl_apellidos</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">LAST NAME</Value>
+        </Property>
+        <Property>
+            <Name>lbl_genero</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">GENDER</Value>
+        </Property>
+        <Property>
+            <Name>rbtn_femenino</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">FEMALE</Value>
+        </Property>
+        <Property>
+            <Name>rbtn_masculino</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">MALE</Value>
+        </Property>
+        <Property>
+            <Name>lbl_mensaje</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">SHOW</Value>
+        </Property>
+        <Property>
+            <Name>btn_mensaje</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">MESSAGE</Value>
+        </Property>
+        <Property>
+            <Name>titulo</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">USER REGISTER</Value>
+        </Property>
+        <Property>
+            <Name>saludo</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">WELCOME</Value>
+        </Property>
+    </Records>
+</MultiProperties>

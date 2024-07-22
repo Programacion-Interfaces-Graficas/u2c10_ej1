@@ -1,0 +1,10 @@
+lbl_idioma=Escoja un idioma
+lbl_nombre=Nombres
+lbl_apellidos=Apellidos
+lbl_genero=Genero
+rbtn_masculino=Femenino
+rbtn_femenino=Masculino
+lbl_mensaje=Mostrar
+btn_mensaje=Mensaje
+titulo=Registro de Usuario
+saludo=Bienvenido  

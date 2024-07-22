@@ -1,0 +1,10 @@
+lbl_idioma=CHOOSE LANGUAJE
+lbl_nombre=NAMES
+lbl_apellidos=LAST NAME
+lbl_genero=GENDER
+rbtn_femenino=FEMALE
+rbtn_masculino=MALE
+lbl_mensaje=SHOW
+btn_mensaje=MESSAGE
+titulo=USER REGISTER
+saludo=WELCOME
