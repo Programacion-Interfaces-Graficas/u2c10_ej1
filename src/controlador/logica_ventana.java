@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.Date;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
@@ -21,8 +22,11 @@ public class logica_ventana implements ActionListener, ItemListener {
 		this.delegado = delegado;
 		this.delegado.btn_mensaje.addActionListener(this);
 		this.delegado.cmb_idioma.addItemListener(this);
-		cargarIdiomas("es_ES","en_EN");
-		
+		//cargarIdiomas("es_ES","en_EN");
+		 // Detectar la configuración regional de la máquina
+        Locale locale = Locale.getDefault();
+        cambiarIdioma(locale.toString());//Adopta automaticamente el idioma en la aplicacion
+        
 	}
 
 	@Override
@@ -40,18 +44,21 @@ public class logica_ventana implements ActionListener, ItemListener {
 	
 	}
 
+	private void cambiarIdioma(String idioma) {
+		delegado.bundle=ResourceBundle.getBundle("idiomas/"+idioma);
+		delegado.lbl_idioma.setText(delegado.bundle.getString("lbl_idioma"));
+		delegado.lbl_nombre.setText(delegado.bundle.getString("lbl_nombre"));
+		delegado.lbl_apellidos.setText(delegado.bundle.getString("lbl_apellidos"));
+		delegado.lbl_genero.setText(delegado.bundle.getString("lbl_genero"));
+		delegado.rbtn_femenino.setText(delegado.bundle.getString("rbtn_femenino"));
+		delegado.rbtn_masculino.setText(delegado.bundle.getString("rbtn_masculino"));
+		delegado.lbl_mensaje.setText(delegado.bundle.getString("lbl_mensaje"));
+		delegado.btn_mensaje.setText(delegado.bundle.getString("btn_mensaje"));	
+	}
 	@Override
 	public void itemStateChanged(ItemEvent e) {
 		if(e.getStateChange()==1) {
-			delegado.bundle=ResourceBundle.getBundle("idiomas/"+delegado.cmb_idioma.getSelectedItem());
-			delegado.lbl_idioma.setText(delegado.bundle.getString("lbl_idioma"));
-			delegado.lbl_nombre.setText(delegado.bundle.getString("lbl_nombre"));
-			delegado.lbl_apellidos.setText(delegado.bundle.getString("lbl_apellidos"));
-			delegado.lbl_genero.setText(delegado.bundle.getString("lbl_genero"));
-			delegado.rbtn_femenino.setText(delegado.bundle.getString("rbtn_femenino"));
-			delegado.rbtn_masculino.setText(delegado.bundle.getString("rbtn_masculino"));
-			delegado.lbl_mensaje.setText(delegado.bundle.getString("lbl_mensaje"));
-			delegado.btn_mensaje.setText(delegado.bundle.getString("btn_mensaje"));			
+					cambiarIdioma(delegado.cmb_idioma.getSelectedItem().toString());
 		}
 	}
 	
